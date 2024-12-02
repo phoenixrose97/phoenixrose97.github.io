@@ -1,0 +1,21 @@
+#service {
+  flex: 1 1 40%;
+}
+   
+#service {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+} 
+
+/* Media Queries */
+
+@media (max-width: 800px) {
+ main {
+   display: block;
+ }
+}

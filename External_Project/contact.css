@@ -1,0 +1,70 @@
+form {
+    max-width: 100%;
+    background: #0d0d0d;
+    padding: 10px;
+    margin: 20px;
+  }
+  
+  input[type="text"],
+  select,
+  textarea,
+  input[type="email"],
+  label {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    display: block;
+    border: 1px solid #eee;
+  }
+  
+  label {
+    border: none;
+    font-size: 1.1rem;
+  }
+  
+  input[type="submit"],
+  input[type="reset"] {
+    width: 100%;
+    background: #f21902;
+    color: #fff;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+  }
+
+/*grid*/
+main {
+    display: grid;
+    grid-template-columns: 3fr 6fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "section-2 section-1"
+      "section-2 section-3"
+   ;
+    gap: 10px;
+  }
+  
+  section:nth-of-type(1) {
+    grid-area: section-1;
+  }
+  
+  section:nth-of-type(2) {
+    grid-area: section-2;
+  }
+
+  section:nth-of-type(3) {
+    grid-area: section-3;
+  }
+
+ /* Media Queries */
+   
+ @media (max-width: 800px) {
+    main {
+      display: block;
+    }
+  }
+   
+ul {
+    list-style: none;
+}

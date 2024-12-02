@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/*
+  font-family: "PT Sans", sans-serif; 
+  font-family: "Noto Sans", sans-serif;
+ */
+
+* {
+  box-sizing: border-box;
+}
+  
+  /*CSS nav*/
+nav {
+  display: flex;
+  padding: 10px;
+  justify-content: space-evenly;
+}
+
+nav {
+  background: #0d0d0d;
+  font-family: "PT Sans", sans-serif; 
+
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-size: 120%;
+    background: #0d0d0d;
+    padding: 10px;
+    display: block;
+    border: 1px solid #0d0d0d;
+    color: #eee
+  }
+  
+  nav li {
+    padding: 1px;
+  }
+  
+  nav a:hover {
+    color: #000;
+    background: #D22B2B;
+  }
+
+/*general */
+
+  header {
+    background: url('images/truck-forward.jpg');
+    background-size: cover;
+    background-position: 35%;
+    padding: 20px;
+    color: #eee;
+    height: 300px;
+    position: relative;
+  }
+  
+  h1 {
+    position: absolute;
+    left: 0px;
+    bottom: 35%;
+    padding: 15px;
+    background: rgba(13,13,13,0.7);
+    font-family: "Noto Sans", sans-serif;
+    font-size: 170%;
+  }
+  
+  header p {
+    position: absolute;
+    left: 0px;
+    top: 175px;
+    padding: 15px;
+    background: rgba(139, 0, 0,0.6);
+    color: #eee;
+    font-family: "PT Sans", sans-serif; 
+    font-size: 115%;
+  }
+
+  section {
+    font-family: "PT Sans", sans-serif; 
+    border: #0d0d0d solid 3px;
+    background: #8B0000;
+    color: #eee;
+    padding: 10px;
+    flex: 1 1 33%;
+  }
+
+  main section img {
+    max-width: 100%;
+  }
+
+  footer {
+    background: #0d0d0d;
+    font-family: "PT Sans", sans-serif; 
+    color: #eee;
+  }
+
+  header, footer{
+    padding: 10px;
+    margin: 10px 0;
+  }
+/*grid*/
+
+    main {
+        display: grid;
+        grid-template-columns: 4fr 9fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+          "home-service home-about"
+          "home-service why-us"
+          "home-service bottom-img"
+       ;
+        gap: 10px;
+      }
+      
+      section:nth-of-type(1) {
+        grid-area: home-about;
+      }
+      
+      section:nth-of-type(2) {
+        grid-area: home-service;
+      }
+    
+      section:nth-of-type(3) {
+        grid-area: why-us;
+      }
+       
+      section:nth-of-type(4) {
+        grid-area: bottom-img;
+      }
+  
+  /* Media Queries */
+   
+   @media (max-width: 800px) {
+     main {
+       display: block;
+     }
+   }
+   
